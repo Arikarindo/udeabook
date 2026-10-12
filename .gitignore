@@ -1,0 +1,22 @@
+﻿# Build & Binaries
+build/
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+err.txt
+
+# IDE & Editor Configs
+.vscode/
+.qtcreator/
+.clangd
+.clangd/
+compile_commands.json
+CMakeLists.txt.user*
+
+# Archivos personales locales
+diapositivas_udeabook.html
+web de aprendizaje/
+Notificacion.cpp
