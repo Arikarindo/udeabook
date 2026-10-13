@@ -10,9 +10,6 @@ private:
   std::size_t tamanoBytes; // Peso del archivo en disco en bytes
   int conteoLikes;         // Contador de likes (nunca negativo)
 
-  // Métodos auxiliares propios para manejo de cadenas en memoria dinámica
-  static std::size_t longitudCadena(const char *cadena);
-  static char *duplicarCadena(const char *origen);
 
 public:
   // --- Constructores y Destructor ---

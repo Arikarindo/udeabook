@@ -1,35 +1,6 @@
 #include "Album.h"
 #include "Usuario.h"
-
-// ---------------------------------------------------------------------------
-// Métodos auxiliares para manejo propio de cadenas
-// ---------------------------------------------------------------------------
-
-std::size_t Album::longitudCadena(const char *cadena) {
-  if (cadena == nullptr) {
-    return 0;
-  }
-  std::size_t len = 0;
-  while (cadena[len] != '\0') {
-    ++len;
-  }
-  return len;
-}
-
-char *Album::duplicarCadena(const char *origen) {
-  if (origen == nullptr) {
-    char *vacio = new char[1];
-    vacio[0] = '\0';
-    return vacio;
-  }
-  std::size_t len = longitudCadena(origen);
-  char *destino = new char[len + 1];
-  for (std::size_t i = 0; i < len; ++i) {
-    destino[i] = origen[i];
-  }
-  destino[len] = '\0';
-  return destino;
-}
+#include "UtilidadesCadena.h"
 
 void Album::liberarFotos() {
   if (fotos != nullptr) {
@@ -62,13 +33,13 @@ void Album::redimensionar(std::size_t nuevaCapacidad) {
 // ---------------------------------------------------------------------------
 
 Album::Album(const char *nombreAlbum, const char *rutaBase)
-    : nombre(duplicarCadena(nombreAlbum)),
-      rutaAlmacenamiento(duplicarCadena(rutaBase)), fotos(nullptr),
+    : nombre(UtilidadesCadena::duplicar(nombreAlbum)),
+      rutaAlmacenamiento(UtilidadesCadena::duplicar(rutaBase)), fotos(nullptr),
       cantFotos(0), capFotos(0), indiceCarrusel(0) {}
 
 Album::Album(const Album &otro)
-    : nombre(duplicarCadena(otro.nombre)),
-      rutaAlmacenamiento(duplicarCadena(otro.rutaAlmacenamiento)),
+    : nombre(UtilidadesCadena::duplicar(otro.nombre)),
+      rutaAlmacenamiento(UtilidadesCadena::duplicar(otro.rutaAlmacenamiento)),
       fotos(nullptr), cantFotos(0), capFotos(0),
       indiceCarrusel(otro.indiceCarrusel) {
   if (otro.cantFotos > 0) {
@@ -91,8 +62,8 @@ Album::~Album() {
 Album &Album::operator=(const Album &otro) {
   if (this != &otro) {
     // 1. Duplica primero cadenas
-    char *nuevoNombre = duplicarCadena(otro.nombre);
-    char *nuevaRuta = duplicarCadena(otro.rutaAlmacenamiento);
+    char *nuevoNombre = UtilidadesCadena::duplicar(otro.nombre);
+    char *nuevaRuta = UtilidadesCadena::duplicar(otro.rutaAlmacenamiento);
 
     // 2. Libera recursos previos
     delete[] nombre;

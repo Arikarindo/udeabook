@@ -17,10 +17,6 @@ protected:
   void redimensionar(std::size_t nuevaCapacidad);
   void liberarFotos();
 
-  // Métodos auxiliares propios para manejo de cadenas en memoria dinámica
-  static std::size_t longitudCadena(const char *cadena);
-  static char *duplicarCadena(const char *origen);
-
 public:
   // --- Constructores y Destructor Virtual ---
   Album(const char *nombreAlbum, const char *rutaBase);
