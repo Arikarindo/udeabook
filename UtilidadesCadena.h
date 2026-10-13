@@ -11,6 +11,10 @@ public:
   // Reserva memoria dinámica exacta (new char[]) y copia el contenido
   // Siempre garantiza un terminador nulo '\0' al final
   static char *duplicar(const char *origen);
+
+  // Comparación lexicográfica: < 0 si a < b, 0 si a == b, > 0 si a > b
+  // Utilizado para verificar rangos de fechas "AAAA-MM-DD"
+  static int comparar(const char *a, const char *b);
 };
 
 #endif // UTILIDADES_CADENA_H
