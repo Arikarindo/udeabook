@@ -9,8 +9,13 @@ Requisitos principales:
 - Funciones propias para el manejo de cadenas.
 - Medicion de eficiencia en iteraciones y memoria RAM consumida.
 
-Funcionalidades planeadas:
-- Manejo de usuarios y perfiles.
-- Publicacion de fotos y organizacion en albumes (publicos, amigos y privados).
-- Envio y recepcion de mensajes privados y solicitudes de amistad.
-- Grafo social con matriz de adyacencia para sugerencias de amigos.
+Avance del proyecto:
+- UtilidadesCadena: funciones basicas para copiar, comparar, medir longitud y concatenar texto en memoria dinamica.
+- Foto: entidad para representar fotos con fecha, ruta, tamano y conteo de likes.
+- Album: clase base y clases derivadas (AlbumPublico, AlbumAmigos, AlbumPrivado) con navegacion circular tipo carrusel.
+- Mensaje: mensajes entre usuarios con fecha y texto, con filtrado por rango de fechas.
+- SolicitudAmistad: gestion de solicitudes de amistad con estados (pendiente, aceptada, rechazada).
+
+Proximos pasos:
+- Clase Usuario con arreglos dinamicos para amigos, albumes, mensajes y solicitudes.
+- Clase Programa para coordinar la persistencia en archivo y la matriz de adyacencia.
