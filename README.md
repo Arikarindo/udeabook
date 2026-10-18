@@ -15,3 +15,12 @@ Sistema de red social por consola desarrollado en C++ con programacion orientada
   - Usuario: administra arreglos dinamicos de amigos, albumes, mensajes y solicitudes. Incluye seleccion de 3 mejores amigos por ponderacion.
   - Programa: controladora principal que maneja la autenticacion, carga y guardado del archivo datos_udeabook.txt, y la matriz de adyacencia para encontrar amigos en comun y sugerencias.
 - Metricas de eficiencia: tras cada accion se reportan las iteraciones realizadas y la memoria consumida en bytes.
+
+## Arquitectura del sistema
+
+![Arquitectura del sistema](udeabook_arquitectura.png)
+
+## Video demostrativo y sustentacion
+
+Enlace al video explicativo y sustentacion del funcionamiento:
+https://youtu.be/WwCKyS2_4?si=PxpKW6nYdM2Yo79
