@@ -1,17 +1,20 @@
-﻿# UdeABook
+# UdeABook
 
-Proyecto del Desafio II para la materia Informatica II (2026-2).
-Sistema de red social por consola desarrollado en C++ con programacion orientada a objetos y gestion manual de memoria.
+UdeABook es una aplicacion de red social por consola desarrollada en C++ para el Desafio II de la materia Informatica II. El proyecto permite simular las funciones principales de una red social mediante un menu interactivo en el que cada usuario puede iniciar sesion y administrar su cuenta.
 
-## Caracteristicas del sistema
+Dentro del sistema, los usuarios pueden agregar amigos, enviar y responder solicitudes de amistad, y recibir sugerencias de nuevas conexiones basadas en los amigos que tienen en comun. Tambien cuenta con un apartado de mensajeria para enviar mensajes a otros contactos, revisar los mensajes pendientes y buscar conversaciones por fechas, ademas de una seccion para seleccionar a los tres mejores amigos.
 
-- Sin uso de STL, structs ni ANSI C: todas las estructuras de datos fueron implementadas de forma dinamica usando clases propias, arreglos y punteros en C++.
-- Manejo de cadenas propio: modulo UtilidadesCadena para todas las operaciones de texto sin librerias de C ni std::string.
-- Modelo de clases:
-  - Foto: ruta, fecha, tamano en bytes y conteo de likes.
-  - Album: gestiona su arreglo dinamico de fotos, configuracion de privacidad (Publico, Amigos, Privado) y carrusel circular.
-  - Mensaje: texto (hasta 512 caracteres), fecha, remitente, destinatario, estado de lectura y busqueda por rango de fechas.
-  - SolicitudAmistad: control de solicitudes con estados pendiente, aceptada o rechazada.
-  - Usuario: administra arreglos dinamicos de amigos, albumes, mensajes (ordenados cronologicamente) y solicitudes. Incluye seleccion de 3 mejores amigos por ponderacion.
-  - Programa: controladora principal que maneja la autenticacion, carga y guardado del archivo datos_udeabook.txt, y la matriz de adyacencia (bool **) para encontrar amigos en comun y sugerencias Top-K.
-- Metricas de eficiencia: tras cada accion se reportan las iteraciones realizadas (directas e indirectas) y la memoria RAM consumida en bytes y KB.
+Por otra parte, la aplicacion permite crear albumes de fotos con diferentes niveles de privacidad (publico, solo amigos o privado), navegar por las fotos mediante un carrusel y dar me gusta a las publicaciones. Toda la informacion se carga y se guarda en un archivo de texto para conservar los cambios realizados, mostrando al final de cada operacion el uso de memoria y la cantidad de pasos ejecutados por el programa.
+
+## Arquitectura del sistema
+
+![Arquitectura del sistema](udeabook_arquitectura.png)
+
+## Video demostrativo y sustentacion
+
+Enlace al video explicativo y sustentacion del funcionamiento:
+https://youtu.be/WwCKyS2_4?si=PxpKW6nYdM2Yo79
+
+## Informe de desarrollo
+
+https://docs.google.com/document/d/1qsGeKGSFRQnRxSknX9JTZq-JwdP1d39e/edit
